@@ -1,6 +1,5 @@
-# AURUM
-> **Autonomous, Intelligent Yield Allocation**
-> *Powered by Chainlink (CRE, CCIP, Functions, Automation)*
+# 🟡 AURUM
+> **Autonomous, Intelligent Yield Allocation** > *Powered by Chainlink (CRE, CCIP, Functions, Automation)*
 
 AURUM is an AI-driven, cross-chain yield allocation protocol. It autonomously optimizes stablecoin yield using Chainlink infrastructure to ensure every capital move is risk-adjusted and trust-minimized.
 
@@ -14,26 +13,30 @@ AURUM is an AI-driven, cross-chain yield allocation protocol. It autonomously op
 
 ---
 
-## Contribution Rules & Workflow
-To maintain code integrity and avoid breaking the protocol, all contributors **must** follow this workflow:
+## ⚖️ Contribution Rules (Mandatory)
+To maintain code integrity during the hackathon, follow these rules strictly:
 
 ### 1. The Golden Rule
-**Never push directly to `main`.** The `main` branch is protected. All changes must arrive via a **Pull Request (PR)**.
+**NEVER push directly to `main`.** Even if you have access, don't do it. The `main` branch is for stable, demo-ready code only.
 
-### 2. Branching Strategy
-Create a feature branch for every task.
-* **Naming convention:** `feat/feature-name`, `fix/bug-name`, or `docs/update-name`.
-* **Example:** `git checkout -b feat/cre-logic`
+### 2. Working in Folders
+To prevent merge conflicts, stay within your assigned directory:
+* **AI/Data Lead:** Work in `/ai-engine`
+* **Smart Contract Lead:** Work in `/contracts`
+* **Frontend Lead:** Work in `/frontend`
+* **Integrations/Scripts:** Work in `/scripts`
 
-### 3. Submission Process
-1. **Push your branch:** `git push origin feat/your-feature`
-2. **Open a PR:** Go to GitHub and click "New Pull Request".
-3. **Review:** Tag at least one teammate to review.
-4. **Merge:** Once approved and tests pass, merge into `main`.
+### 3. Git Workflow
+1. `git pull origin main` (Start your session with this)
+2. `git checkout -b feat/your-feature-name`
+3. Work only in your relevant folder.
+4. `git add .` -> `git commit -m "feat: description of work"`
+5. `git push origin feat/your-feature-name`
+6. Open a **Pull Request (PR)** on GitHub.
 
 ---
 
-## Repository Structure
+## 📂 Repository Structure
 ```text
 ├── ai-engine/      # Python models & Yield prediction scripts
 ├── contracts/      # Solidity/Cairo smart contracts (Vaults, CRE)
